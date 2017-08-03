@@ -1,4 +1,5 @@
 function(_add_boost_test)
+  return()
   if(NOT BOOST_STANDALONE)
     return()
   endif()

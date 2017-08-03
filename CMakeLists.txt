@@ -32,11 +32,11 @@ set(BOOST_LIBS
   atomic
   chrono
   container
-  context
-  coroutine
+  #context
+  #coroutine2
   date_time
   exception
-  fiber
+  #fiber
   filesystem
   graph
   iostreams
