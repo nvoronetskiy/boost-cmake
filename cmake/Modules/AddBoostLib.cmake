@@ -10,6 +10,9 @@ function(_add_boost_lib)
     OUTPUT_NAME "boost_${BOOSTLIB_NAME}"
     FOLDER "Boost"
   )
+
+  set_target_properties(Boost_${BOOSTLIB_NAME} PROPERTIES ARCHIVE_OUTPUT_DIRECTORY "$ENV{SharedTecINT}/libs")
+
   if(NOT BOOST_STANDALONE)
     set_target_properties(Boost_${BOOSTLIB_NAME} PROPERTIES EXCLUDE_FROM_ALL 1)
   endif()
