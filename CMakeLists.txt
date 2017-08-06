@@ -17,6 +17,7 @@ include(AddBoostLib)
 include(AddBoostTest)
 
 set_property(GLOBAL PROPERTY USE_FOLDERS TRUE)
+add_definitions(-DBOOST_SYSTEM_NO_DEPRECATED -DBOOST_TEST_NO_MAIN)
 
 if(USE_ANDROID)
   # CMake 3.7.1 doesn't define the target triple for the ASM language,
