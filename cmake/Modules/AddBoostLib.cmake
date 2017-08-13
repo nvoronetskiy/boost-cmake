@@ -11,10 +11,16 @@ function(_add_boost_lib)
     FOLDER "Boost"
   )
 
-  set_target_properties(Boost_${BOOSTLIB_NAME} PROPERTIES ARCHIVE_OUTPUT_DIRECTORY "_obj-lib-etc/libs")
+  IF(DEFINED INTERMEDIATE_ENV_DIR)
+    set(RESULT_DIR ${INTERMEDIATE_ENV_DIR})
+  ELSE()
+    set(RESULT_DIR "${CMAKE_CURRENT_SOURCE_DIR}/../_obj-lib-etc/libs")
+  ENDIF()
+
+  set_target_properties(Boost_${BOOSTLIB_NAME} PROPERTIES ARCHIVE_OUTPUT_DIRECTORY "${RESULT_DIR}")
 
   if(NOT BOOST_STANDALONE)
-    set_target_properties(Boost_${BOOSTLIB_NAME} PROPERTIES EXCLUDE_FROM_ALL 1)
+    #set_target_properties(Boost_${BOOSTLIB_NAME} PROPERTIES EXCLUDE_FROM_ALL 1)
   endif()
   target_link_libraries(Boost_${BOOSTLIB_NAME} PUBLIC Boost::boost)
   if(MSVC)
