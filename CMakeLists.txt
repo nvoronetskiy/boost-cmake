@@ -33,6 +33,7 @@ set(BOOST_LIBS
   atomic
   chrono
   container
+  thread
   #context
   #coroutine2
   date_time
@@ -41,7 +42,7 @@ set(BOOST_LIBS
   filesystem
   graph
   iostreams
-  locale
+  #locale
   #log
   math
   mpi
@@ -54,7 +55,6 @@ set(BOOST_LIBS
   signals
   system
   unit_test_framework
-  thread
   timer
   type_erasure
   wave
