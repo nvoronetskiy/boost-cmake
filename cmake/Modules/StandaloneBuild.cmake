@@ -1,4 +1,4 @@
-if(CMAKE_CURRENT_SOURCE_DIR STREQUAL "${CMAKE_SOURCE_DIR}")
+#if(CMAKE_CURRENT_SOURCE_DIR STREQUAL "${CMAKE_SOURCE_DIR}")
   message(STATUS "Standalone mode detected")
   set(BOOST_STANDALONE ON)
   set(CMAKE_CXX_STANDARD 11)
@@ -7,4 +7,4 @@ if(CMAKE_CURRENT_SOURCE_DIR STREQUAL "${CMAKE_SOURCE_DIR}")
   #enable_testing()
 
   include(ccache)
-endif()
+#endif()
