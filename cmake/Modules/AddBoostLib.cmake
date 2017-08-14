@@ -14,7 +14,7 @@ function(_add_boost_lib)
   IF(DEFINED INTERMEDIATE_ENV_DIR)
     set(RESULT_DIR ${INTERMEDIATE_ENV_DIR})
   ELSE()
-    set(RESULT_DIR "${CMAKE_CURRENT_SOURCE_DIR}/../_obj-lib-etc/libs")
+    set(RESULT_DIR "${CMAKE_CURRENT_SOURCE_DIR}/../_obj-lib-etc")
   ENDIF()
 
   set_target_properties(Boost_${BOOSTLIB_NAME} PROPERTIES ARCHIVE_OUTPUT_DIRECTORY "${RESULT_DIR}")
