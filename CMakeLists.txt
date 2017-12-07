@@ -2,8 +2,12 @@ cmake_minimum_required(VERSION 3.0.0)
 project(Boost-CMake)
 
 option(BOOST_DOWNLOAD_TO_BINARY_DIR "Prefer downloading Boost to the binary directory instead of source directory" OFF)
-set(BOOST_URL "https://dl.bintray.com/boostorg/release/1.65.1/source/boost_1_65_1.tar.gz" CACHE STRING "Boost download URL")
-set(BOOST_URL_SHA256 "a13de2c8fbad635e6ba9c8f8714a0e6b4264b60a29b964b940a22554705b6b60" CACHE STRING "Boost download URL SHA256 checksum")
+#set(BOOST_URL "https://dl.bintray.com/boostorg/release/1.65.1/source/boost_1_65_1.tar.gz" CACHE STRING "Boost download URL")
+#set(BOOST_URL_SHA256 "a13de2c8fbad635e6ba9c8f8714a0e6b4264b60a29b964b940a22554705b6b60" CACHE STRING "Boost download URL SHA256 checksum")
+
+set(BOOST_URL "https://dl.bintray.com/boostorg/beta/1.66.0.beta.1/source/boost_1_66_0_b1.tar.gz" CACHE STRING "Boost download URL")
+set(BOOST_URL_SHA256 "f0f455e39bc47b2b670a17cb221687506e9a22dc478956d3d8aabb9cb835a7dc" CACHE STRING "Boost download URL SHA256 checksum")
+
 
 list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake/Modules)
 
@@ -41,7 +45,7 @@ set(BOOST_LIBS
   filesystem
   graph
   iostreams
-  locale
+  #locale
   log
   math
   mpi
