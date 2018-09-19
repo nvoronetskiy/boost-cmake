@@ -5,8 +5,8 @@ option(BOOST_DOWNLOAD_TO_BINARY_DIR "Prefer downloading Boost to the binary dire
 #set(BOOST_URL "https://dl.bintray.com/boostorg/release/1.65.1/source/boost_1_65_1.tar.gz" CACHE STRING "Boost download URL")
 #set(BOOST_URL_SHA256 "a13de2c8fbad635e6ba9c8f8714a0e6b4264b60a29b964b940a22554705b6b60" CACHE STRING "Boost download URL SHA256 checksum")
 
-set(BOOST_URL "https://dl.bintray.com/boostorg/beta/1.67.0.beta.1/source/boost_1_67_0_b1.7z" CACHE STRING "Boost download URL")
-set(BOOST_URL_SHA256 "154cf490da858fd9c2307bb904b07a42cbe8355ecf99d5477f0d843c6d03cdda" CACHE STRING "Boost download URL SHA256 checksum")
+set(BOOST_URL "https://dl.bintray.com/boostorg/release/1.68.0/source/boost_1_68_0.7z" CACHE STRING "Boost download URL")
+set(BOOST_URL_SHA256 "59804d8fad02cf3b09485f3dbc0f9097c05fc1e0123f0c133b35a6c6f601109a" CACHE STRING "Boost download URL SHA256 checksum")
 
 
 list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake/Modules)
